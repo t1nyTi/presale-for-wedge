@@ -1,0 +1,264 @@
+.root {
+  @apply w-full flex flex-col items-center justify-center mt-12;
+
+  .selectGroupWrapper {
+    @apply relative flex gap-2 justify-center items-center;
+
+    .selectWrapper {
+      @apply flex justify-center items-center px-[16px] py-[12px] bg-[#121218] rounded-lg cursor-pointer;
+
+      .downArrow {
+        @apply ml-2;
+        transition: all 0.2s ease-out 0s;
+        transform: none;
+      }
+
+      .active {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .strategyContent {
+      @apply absolute z-[2000] p-4 left-0 top-[100px] w-fit bg-[#121218] rounded-lg;
+      transition: all 0.2s ease-out 0s;
+      transform: none;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    .depositContent {
+      @apply absolute z-[2000] p-4 left-0 top-[100px] w-fit bg-[#121218] rounded-lg;
+      transition: all 0.2s ease-out 0s;
+      transform: none;
+      z-index: -1;
+      opacity: 0;
+      svg {
+        @apply w-[40px] h-[40px] mr-2;
+      }
+    }
+
+    .sortContent {
+      @apply absolute z-[2000] p-4 right-0 top-[100px] w-[200px] bg-[#121218] rounded-lg;
+      transition: all 0.2s ease-out 0s;
+      transform: none;
+      z-index: -1;
+      opacity: 0;
+      svg {
+        @apply w-[40px] h-[40px] mr-2;
+      }
+    }
+    .active {
+      opacity: 1;
+      z-index: 1000;
+      transform: translateY(-40px) translateZ(0px);
+    }
+  }
+
+  .cardsWrapper {
+    @apply flex flex-wrap w-[320px] md:w-[640px] lg:w-[960px] xl:w-[1280px];
+    .card {
+      @apply relative w-[400px] h-[450px] mt-[40px] mb-0 mx-[15px] border-2 border-solid border-[#121218] bg-[#121218] rounded-[8px] p-[16px] ;
+      transition: box-shadow 0.25s ease-out 0s, border 0.25s ease-out 0s;
+      .cardTop {
+        width: calc(100% + 32px);
+        margin: -16px -16px 0px;
+        padding: 16px;
+        border-radius: 8px 8px 0px 0px;
+        height: 120px;
+      }
+      .bnb {
+        background: linear-gradient(
+            90deg,
+            rgba(240, 185, 11, 0.02) 1.04%,
+            rgba(240, 185, 11, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .uni {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 0, 122, 0.02) 1.04%,
+            rgba(255, 0, 122, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .savax {
+        background: linear-gradient(
+            90deg,
+            rgba(17, 186, 240, 0.02) 1.04%,
+            rgba(17, 186, 240, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .eth {
+        background: linear-gradient(
+            90deg,
+            rgba(98, 126, 234, 0.02) 1.04%,
+            rgba(98, 126, 234, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .usdc {
+        background: linear-gradient(
+            90deg,
+            rgba(62, 115, 196, 0.02) 1.04%,
+            rgba(62, 115, 196, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .steth {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 163, 255, 0.02) 1.04%,
+            rgba(0, 163, 255, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .reth {
+        background: linear-gradient(
+            90deg,
+            rgba(239, 68, 68, 0.02) 1.04%,
+            rgba(239, 68, 68, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .wbtc {
+        background: linear-gradient(
+            90deg,
+            rgba(227, 150, 82, 0.082) 1.04%,
+            rgba(227, 150, 82, 0.27) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .avax {
+        background: linear-gradient(
+            90deg,
+            rgba(232, 65, 66, 0.082) 1.04%,
+            rgba(232, 65, 66, 0.27) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .aave {
+        background: linear-gradient(
+            90deg,
+            rgba(46, 186, 198, 0.02) 1.04%,
+            rgba(46, 186, 198, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .ape {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 84, 249, 0.02) 1.04%,
+            rgba(0, 84, 249, 0.19) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .sol {
+        background: linear-gradient(
+            90deg,
+            rgba(20, 241, 149, 0.082) 1.04%,
+            rgba(20, 241, 149, 0.27) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .cardContent {
+        .svgIcon {
+          @apply rounded-full w-[56px] h-[56px] mt-[-28px];
+          box-shadow: rgb(18, 18, 24) 0px 0px 0px 2px;
+        }
+        .apyInfoWrapper {
+          @apply absolute top-[-281px] left-[-140px] w-[280px] h-[280px] bg-[#121218] rounded-[10px] border border-[#1c1c22] p-[16px];
+        }
+      }
+      .earnCardContent {
+        @apply flex flex-col h-[447px] rounded-[8px] justify-center items-center m-[-16px] bg-[#030309] shadow;
+        box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 24px inset;
+      }
+    }
+    .bnbCard {
+      &:hover {
+        box-shadow: rgba(240, 185, 11, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(240, 185, 11);
+      }
+    }
+    .uniCard {
+      &:hover {
+        box-shadow: rgba(255, 0, 122, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(255, 0, 122);
+      }
+    }
+    .stethEarnCard {
+      &:hover {
+        box-shadow: rgba(0, 163, 255, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(0, 163, 255);
+      }
+    }
+    .earnCard {
+      &:hover {
+        box-shadow: rgba(62, 115, 196, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(62, 115, 196);
+      }
+    }
+    .savaxCard {
+      &:hover {
+        box-shadow: rgba(17, 186, 240, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(17, 186, 240);
+      }
+    }
+    .ethCard {
+      &:hover {
+        box-shadow: rgba(98, 126, 234, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(98, 126, 234);
+      }
+    }
+    .usdcCard {
+      &:hover {
+        box-shadow: rgba(62, 115, 196, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(62, 115, 196);
+      }
+    }
+    .stethCard {
+      &:hover {
+        box-shadow: rgba(0, 163, 255, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(0, 163, 255);
+      }
+    }
+    .rethCard {
+      &:hover {
+        box-shadow: rgba(239, 68, 68, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(239, 68, 68);
+      }
+    }
+    .wbtcCard {
+      &:hover {
+        box-shadow: rgba(227, 150, 82, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(227, 150, 82);
+      }
+    }
+    .avaxCard {
+      &:hover {
+        box-shadow: rgba(232, 65, 66, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(232, 65, 66);
+      }
+    }
+    .aaveCard {
+      &:hover {
+        box-shadow: rgba(46, 186, 198, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(46, 186, 198);
+      }
+    }
+    .apeCard {
+      &:hover {
+        box-shadow: rgba(0, 84, 249, 0.4) 0px 0px 70px;
+        border-color: rgb(0, 84, 249);
+      }
+    }
+    .solCard {
+      &:hover {
+        box-shadow: rgba(20, 241, 149, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(20, 241, 149);
+      }
+    }
+  }
+}

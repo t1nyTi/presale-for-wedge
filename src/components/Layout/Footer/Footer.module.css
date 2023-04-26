@@ -1,0 +1,4 @@
+.root {
+  @apply flex w-full flex-nowrap h-[52px];
+  border-top: 1px solid rgb(28, 28, 34);
+}

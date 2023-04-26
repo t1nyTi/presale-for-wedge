@@ -1,0 +1,41 @@
+.root {
+  @apply sticky top-0 z-10 w-full flex flex-row justify-between items-center px-16 h-[80px];
+  border-bottom: 1px solid rgb(28, 28, 34);
+  backdrop-filter: blur(40px);
+
+  .nav {
+    @apply relative flex cursor-pointer text-white stroke-2 items-center justify-between w-full;
+
+    .logo {
+      @apply lg:flex;
+    }
+
+    .itemsWrapper {
+      @apply absolute flex justify-center items-center w-full;
+
+      .item {
+        @apply flex font-normal text-sm text-white uppercase items-center tracking-widest opacity-50 px-[16px];
+        &:hover {
+          @apply opacity-100;
+        }
+      }
+      .extraLink {
+        color: rgb(22, 206, 185);
+        @apply opacity-100;
+      }
+      .active {
+        @apply opacity-100;
+        &:hover {
+          @apply opacity-[0.64];
+        }
+      }
+    }
+
+    .connectWallet {
+      @apply flex justify-center items-center uppercase bg-[#16ceb914] font-normal text-base h-[48px] text-[#16ceb9] px-[12px] rounded-[8px];
+      &:hover {
+        @apply opacity-[0.64];
+      }
+    }
+  }
+}

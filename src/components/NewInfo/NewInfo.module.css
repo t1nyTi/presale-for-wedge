@@ -1,0 +1,7 @@
+.root {
+  @apply w-full flex items-center justify-center bg-[#f0b90b28] px-2 py-3;
+
+  .dot {
+    @apply w-2 h-2 rounded-full bg-[#f0b90b] mr-2;
+  }
+}
