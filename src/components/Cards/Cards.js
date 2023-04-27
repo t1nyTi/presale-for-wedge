@@ -30,7 +30,14 @@ import { useState } from "react";
 import s from "./Cards.module.css";
 import cn from "classnames";
 import Wedge from "assets/logo.png";
+import {
+  PayPalScriptProvider,
+  PayPalButtons,
+  usePayPalScriptReducer
+} from "@paypal/react-paypal-js";
 
+import ButtonWrapper from "./paymentMethod"
+import PaymentMethodTP from "./paymentMethodTP";
 
 
 
@@ -45,7 +52,7 @@ const Cards = () => {
   return (
     <div className={s.root}>
       
-      <div className={s.cardsWrapper}>
+      <div className={cn(s.cardsWrapper,"justify-center")}>
 
 
         <div className={cn(s.card, s.bnbCard)}>
@@ -112,8 +119,30 @@ const Cards = () => {
         </div>
 
 
+        <div className={cn(s.card, s.bnbCard)}>
+          <div className={cn(s.cardPay,"overflow-auto", "bgFadeInOut", s.bnb)}>
+          <PaymentMethodTP/>
+            </div>
+        
+        </div>
+
 
         
+        {/* <div style={{ maxWidth: "750px", minHeight: "200px" }}>
+            <PayPalScriptProvider
+                options={{
+                    "client-id": "test",
+                    components: "buttons",
+                    currency: "USD"
+                }}
+            >
+              
+              <ButtonWrapper
+                          currency={'usd'}
+                          showSpinner={false}
+                      />
+			</PayPalScriptProvider>
+		</div> */}
 
 
           {/* <div className={cn(s.card, s.earnCard)}>

@@ -37,7 +37,7 @@ function PortfolioPage() {
               
             </div>
             <div className="mt-[80px] flex flex-wrap w-full">
-              <span className="text-5xl leading-[24px] mr-[16px] w-full uppercase">
+              <span className="text-5xl mr-[16px] w-full uppercase tracking-wide	leading-tight	tracking-wide	line-clamp-3	">
                 Wedge Finance Token
               </span>
               <span className="text-lg leading-[24px] mt-[24px] text-[#b6b6b5]">

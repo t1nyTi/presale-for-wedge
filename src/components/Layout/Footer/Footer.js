@@ -20,7 +20,7 @@ const Footer = () => {
           AUCTIONS
         </div>
       </div>
-      <div className="w-1/3 flex items-center justify-end">
+      {/* <div className="w-1/3 flex items-center justify-end">
         <div className="py-0 px-[12px] md:px-[24px] text-sm opacity-[0.48] hover:opacity-100 cursor-pointer">
           DISCORD
         </div>
@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="py-0 px-[12px] md:px-[24px] text-sm opacity-[0.48] hover:opacity-100 cursor-pointer">
           GITHUB
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -66,6 +66,14 @@
         border-radius: 8px 8px 0px 0px;
         height: 120px;
       }
+      .cardPay {
+        overflow: auto;
+        width: calc(100% + 32px);
+        margin: -16px -16px 0px;
+        padding: 16px;
+        border-radius: 8px 8px 0px 0px;
+        height: 450px;
+      }
       .bnb {
         background: linear-gradient(
             90deg,
